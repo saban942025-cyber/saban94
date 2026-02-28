@@ -14,7 +14,51 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      inventory: {
+        Row: {
+          application_method: string | null
+          coverage_per_sqm: string | null
+          created_at: string
+          drying_time: string | null
+          features: string[] | null
+          id: string
+          image_url: string | null
+          price: number
+          product_name: string
+          sku: string
+          updated_at: string
+          video_url: string | null
+        }
+        Insert: {
+          application_method?: string | null
+          coverage_per_sqm?: string | null
+          created_at?: string
+          drying_time?: string | null
+          features?: string[] | null
+          id?: string
+          image_url?: string | null
+          price: number
+          product_name: string
+          sku: string
+          updated_at?: string
+          video_url?: string | null
+        }
+        Update: {
+          application_method?: string | null
+          coverage_per_sqm?: string | null
+          created_at?: string
+          drying_time?: string | null
+          features?: string[] | null
+          id?: string
+          image_url?: string | null
+          price?: number
+          product_name?: string
+          sku?: string
+          updated_at?: string
+          video_url?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
